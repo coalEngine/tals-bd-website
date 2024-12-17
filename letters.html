@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letters</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+        body{
+            margin: 0;
+        }
+
+        .modal{
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+                /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 25px;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .close2 {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close2:hover,
+        .close2:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .close3 {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close3:hover,
+        .close3:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .close4 {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close4:hover,
+        .close4:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .close5 {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close5:hover,
+        .close5:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .close6 {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close6:hover,
+        .close6:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .close7 {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close7:hover,
+        .close7:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .close8 {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close8:hover,
+        .close8:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+        .button1{
+            appearance: none;
+            border: none;
+            margin: 3vh;
+            background-color: white;
+            position: relative;
+            align-items: center;
+            display: flow-root;
+            text-align: center;
+            padding: 1vh;
+        }
+
+        
+        .button1:hover{
+            bottom: 10px;
+            transition: 2s;
+        }
+        .button-container {
+            display: flex;
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 40px;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .button {
+            outline: 0 !important;
+            border: 0 !important;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000000;
+            transition: all ease-in-out 0.3s;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+        }
+
+        .icon {
+            font-size: 20px;
+        }
+
+        @font-face {
+            font-family: myFont;
+            src: url(SuperPixel-m2L8j.ttf);
+        }
+
+        h2{
+            display: block;
+            text-align: left;
+            align-items: center;
+            font-family: myFont;
+            font-size: 4vh;
+        }
+
+        p{
+            font-family: "Pixelify Sans", sans-serif;
+            font-size: 2vh;
+        }
+
+        .title{
+            font-size: 5.5vh;
+            text-align: center;
+        }
+
+        video{
+            align-items: center;
+            justify-content: center;
+            width: 30vh;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="button-container">
+  <button onclick="location.href = 'index.html'" class="button">
+    <svg
+      class="icon"
+      stroke="currentColor"
+      fill="currentColor"
+      stroke-width="0"
+      viewBox="0 0 1024 1024"
+      height="1em"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"
+      ></path>
+    </svg>
+  </button>
+</div>
+    <h2 class="title">
+        BIRTHDAY WISHES
+    </h2>
+
+     <!-- Trigger/Open The Modal -->
+     <a class="button1" id="myBtn">
+        <img class="img1" src="everyoneelse.png">
+     </a>
+
+     <a class="button1" id="myBtn2">
+        <img class="img1" src="everyoneelse.png">
+     </a>
+
+     <a class="button1" id="myBtn3">
+        <img class="img1" src="ghadeer.png">
+     </a>
+
+     <a class="button1" id="myBtn4">
+        <img class="img1" src="everyoneelse.png">
+     </a>
+
+     <a class="button1" id="myBtn5">
+        <img class="img1" src="everyoneelse.png">
+     </a>
+
+     <a class="button1" id="myBtn6">
+        <img class="img1" src="everyoneelse.png">
+     </a>
+     <a class="button1" id="myBtn7">
+        <img class="img1" src="everyoneelse.png">
+     </a>
+     <a class="button1" id="myBtn8">
+        <img class="img1" src="everyoneelse.png">
+     </a>
+     
+
+     <!-- The Modal -->
+     <div id="myModal" class="modal">
+       <!-- Modal content -->
+       <div class="modal-content">
+         <span class="close">×</span>
+         <h2>robianny:
+
+         </h2>
+         <p>You're my favorite adult (dont tell anyone about this)
+            تحذير، لوحظ يهودي في هذه المحادثة
+            كونوا في استعداد للتدمير في سبيل الله</p>
+       </div>
+     </div>
+
+     <div id="myModal2" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close2">×</span>
+          <h2>triblex:
+ 
+          </h2>
+          <p>Happy birthday dude! 
+            Damn you're turning 18 is wild considering that i first met you when you were 14 it's crazy how time fly this fast.
+            Joking aside i have always enjoyed your company, we were always enjoying our time and laughing at random stupid videos, honestly if i had to choose a timeline to live in, i would always choose one where you're there
+            Genuinely seeing you turning 18 and becoming full grown adult is really crazy, it felt like yesterday when i joined TGDPS and got to talk to you more, like man i sometimes wish you would join VCs because that's how it is to be around you
+            Now, in this day, is a new chapter for you, a new page, where you could create new memories and start over with a new beginning
+            And no matter how you feel mentally or physically, just remember that i am always with you and you will always be not my friend, but my brother
+            Happy 18th birthday bro, love you! <3</p>
+        </div>
+      </div>
+
+      <div id="myModal3" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close3">×</span>
+          <h2>Ghadeer:
+ 
+          </h2>
+          <p>hi talal !!! I dont normally call you that but special occasions come with special names.
+            ive almost known you for a year now ! which is awesome sauce 😂🔥 ure turning into a big man but yet only i know ur secret… HAPPY 18TH BIRTHDAY! I wish you good year after good year and just know whenever i think of you i cant think of anything bad, i always think of you as one of my bestest friends and a person who always brightens my day♥️ you are one of the sweetest most genuine people i have met on the internet and i care for you so much, and i know other people do aswell. You are appreciated by the people around you and this gift i have planned is to make you see that ♥️, i got thiery in on it because i cant really learn how to program a website in 2 weeks 😭😭😭 but i am so happy to be here with you and be able to show you how many people appreciate you on this special day of the year ♥️.
+            happy birthday turtle 🐢🐢 :3</p>
+        </div>
+      </div>
+
+      <div id="myModal4" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close4">×</span>
+          <h2>pavv:
+ 
+          </h2>
+          <video src="utomp3.com_-_Today_is_your_birthday_dont_cry_have_fun_Happy_Birthday_360P.mp4" controls></video>
+        </div>
+      </div>
+
+      <div id="myModal5" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close5">×</span>
+          <h2>Jesse:
+ 
+          </h2>
+          <p>
+            "في هذا التقرير، سنسلط الضوء على الأنشطة المقلقة للفرد المعروف باسم Tal9988 وتفاعلاته المشبوهة مع القاصرين، بهدف توعية المجتمع وحماية الأطفال من المخاطر المحتملة."
+(he made chatgpt translate it to Arabic because it would be funnier)
+          </p>
+        </div>
+      </div>
+
+      <div id="myModal6" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close6">×</span>
+          <h2>Soul:
+ 
+          </h2>
+          <p>Happy birthday tal!  I'm glad to have met you this year, i'm looking towards the next ^-^</p>
+        </div>
+      </div>
+
+      <div id="myModal7" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close7">×</span>
+          <h2>Kirb:
+ 
+          </h2>
+          <p>Greetings tal!
+            Firstly I got to say; happy birthday and I hope you have a great one celebrating it (or whatever I really don't know 😭)
+            
+            Eitherway, although it has been a short time in when we met each other, you still are a great person and heavily funny in my eyes, you're way too energetic when it comes to spending time with us, I really did have enjoyment being around you and them, I do heavily appreciate you for bein a friend of mine.
+            
+            I hope you the best in everything and remember to always take care of yourself 🙏 
+            
+            Yours truly,
+            Kirb</p>
+        </div>
+      </div>
+
+      <div id="myModal8" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close8">×</span>
+          <h2>Asp:
+ 
+          </h2>
+          <p>Happy Birthday Tal!!  I’ll give you more music recommendations as a birthday present if you’d like! You've been a nice friend, and I hope you have a wonderful birthday (eat lots of cake if you ever get any 😊 )</p>
+        </div>
+      </div>
+
+</body>
+<script>
+        // Get the modal
+    var modal = document.getElementById('myModal');
+    var modal2 = document.getElementById('myModal2');
+    var modal3 = document.getElementById('myModal3');
+    var modal4 = document.getElementById('myModal4');
+    var modal5 = document.getElementById('myModal5');
+    var modal6 = document.getElementById('myModal6');
+    var modal7 = document.getElementById('myModal7');
+    var modal8= document.getElementById('myModal8');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    var btn2 = document.getElementById("myBtn2");
+    var btn3 = document.getElementById("myBtn3");
+    var btn4 = document.getElementById("myBtn4");
+    var btn5 = document.getElementById("myBtn5");
+    var btn6 = document.getElementById("myBtn6");
+    var btn7 = document.getElementById("myBtn7");
+    var btn8 = document.getElementById("myBtn8");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0]
+    var span2 = document.getElementsByClassName("close2")[0]
+    var span3 = document.getElementsByClassName("close3")[0]
+    var span4 = document.getElementsByClassName("close4")[0]
+    var span5 = document.getElementsByClassName("close5")[0]
+    var span6 = document.getElementsByClassName("close6")[0]
+    var span7 = document.getElementsByClassName("close7")[0]
+    var span8= document.getElementsByClassName("close8")[0]
+
+
+
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    btn2.onclick = function() {
+        modal2.style.display = "block";
+    }
+    btn3.onclick = function() {
+        modal3.style.display = "block";
+    }
+    btn4.onclick = function() {
+        modal4.style.display = "block";
+    }
+    btn5.onclick = function() {
+        modal5.style.display = "block";
+    }
+    btn6.onclick = function() {
+        modal6.style.display = "block";
+    }
+    btn7.onclick = function() {
+        modal7.style.display = "block";
+    }
+    btn8.onclick = function() {
+        modal8.style.display = "block";
+    }
+   
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    span2.onclick = function() {
+        modal2.style.display = "none";
+    }
+    span3.onclick = function() {
+        modal3.style.display = "none";
+    }
+    span4.onclick = function() {
+        modal4.style.display = "none";
+    }
+    span5.onclick = function() {
+        modal5.style.display = "none";
+    }
+    span6.onclick = function() {
+        modal6.style.display = "none";
+    }
+    span7.onclick = function() {
+        modal7.style.display = "none";
+    }
+    span8.onclick = function() {
+        modal8.style.display = "none";
+    }
+    
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        if (event.target == modal2) {
+            modal2.style.display = "none";
+        }
+        if (event.target == modal3) {
+            modal3.style.display = "none";
+        }
+        if (event.target == modal4) {
+            modal4.style.display = "none";
+        }
+        if (event.target == modal5) {
+            modal5.style.display = "none";
+        }
+        if (event.target == modal6) {
+            modal6.style.display = "none";
+        }
+        if (event.target == modal7) {
+            modal7.style.display = "none";
+        }
+        if (event.target == modal8) {
+            modal8.style.display = "none";
+        }
+    }
+</script>
+</html>
